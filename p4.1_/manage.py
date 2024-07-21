@@ -1,9 +1,4 @@
 #!/usr/bin/env python
-'''
- For students enrolment developed in Module 2, create a generic class view which
-displays list of students and detail view that displays student details for any selected student
-in the list.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

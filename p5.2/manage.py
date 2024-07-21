@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-'''
-Develop a search application in Django using AJAX that displays courses enrolled by a
-student being searched.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

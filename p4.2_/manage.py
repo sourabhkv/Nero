@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-'''
-Develop example Django app that performs CSV and PDF generation for any models
-created in previous laboratory component.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

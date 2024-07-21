@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from studCourseRegApp.views import  generateCSV, home,studentlist,courselist,register,enrolledStudents,add_project,StudentListView,StudentDetailView,generatePDF
+from studCourseRegApp.views import enrolledStudentsUsingAjax, generateCSV, home, registerAjax, studentlist,courselist,register,enrolledStudents,add_project,StudentListView,StudentDetailView,generatePDF
 urlpatterns = [
     path('secretadmin/', admin.site.urls),
     path('',home),
@@ -14,4 +14,8 @@ urlpatterns = [
     path('genericdetailedviewstudent/<int:pk>/',StudentDetailView.as_view()),
     path('download_course_table_as_csv/',generateCSV),
     path('download_course_table_as_pdf/',generatePDF),
+    path('courseRegUsingAjax/',registerAjax),
+    path('course_search_ajax/',enrolledStudentsUsingAjax),
+    
 ]
+

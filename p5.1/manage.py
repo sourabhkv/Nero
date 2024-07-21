@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-'''
- Develop a registration page for student enrolment as done in Module 2 but without page
-refresh using AJAX.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

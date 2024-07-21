@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-'''
-For student and course models created in Lab experiment for Module2, register admin
-interfaces, perform migrations and illustrate data entry through admin forms.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

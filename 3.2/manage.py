@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-'''
-Develop a Model form for student that contains his topic chosen for project, languages
-used and duration with a model called project.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

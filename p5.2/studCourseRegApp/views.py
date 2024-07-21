@@ -85,3 +85,41 @@ def generatePDF(request):
     table=Table(table_data)
     pdf.build([table])
     return resp
+
+
+from django.http import HttpResponse
+from django.shortcuts import render
+from studCourseRegApp.models import student,course, projectForm
+
+def registerAjax(request): 
+    if request.method == "POST": 
+        sid=request.POST.get("susn") 
+        cid=request.POST.get("ccode") 
+        studentobj=student.objects.get(id=sid) 
+        courseobj=course.objects.get(id=cid) 
+        res=studentobj.courses.filter(id=cid) 
+        if res: 
+            return HttpResponse("<h1>Student already enrolled</h1>") 
+        studentobj.courses.add(courseobj) 
+        return HttpResponse("<h1>Student enrolled successfully</h1>") 
+        
+    else: 
+        studentsobj=student.objects.all() 
+        coursesobj=course.objects.all() 
+         
+        return render(request,"courseRegUsingAjax.html",{"students":studentsobj,"courses":coursesobj})
+
+from django.http import HttpResponse
+from django.shortcuts import render
+from studCourseRegApp.models import student,course, projectForm
+
+def enrolledStudentsUsingAjax(request):
+    if request.method=="POST":
+        cid=request.POST.get("cname")
+        
+        courseobj=course.objects.get(id=cid)
+        studentlistobj=courseobj.student_set.all()
+        return render(request,'EnrolledStudentsAjax.html',{'course':courseobj,'student_list':studentlistobj})                                                                                   
+    else:
+        courselist=course.objects.all()
+        return render(request,'Course_search_ajax.html',{'Course_List':courselist})

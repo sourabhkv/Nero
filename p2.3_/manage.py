@@ -1,9 +1,4 @@
 #!/usr/bin/env python
-'''
-Develop a layout.html with a suitable header (containing navigation menu) and footer
-with copyright and developer information. Inherit this layout.html and create 3 additional
-pages: contact us, About Us and Home page of any website.
-'''
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
